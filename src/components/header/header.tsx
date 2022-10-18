@@ -28,6 +28,9 @@ export default component$(() => {
             Tutorials
           </a>
         </li>
+        <li>
+          This a component library
+        </li>
       </ul>
     </header>
   );
