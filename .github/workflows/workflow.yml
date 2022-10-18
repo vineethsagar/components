@@ -1,0 +1,27 @@
+name: components-ci-cd
+on: 
+  push:
+    branches:
+      - 'master'
+jobs:
+    deploying_app: 
+      name: deploying the App
+      runs-on: ubuntu-latest
+        
+      strategy:
+        matrix:
+          node-version: [15.x]
+      
+      steps:
+        - name: Checout
+          uses: actions/checkout@v1
+          
+        - name: Install and build
+          run: npm install && npm run build
+          
+        - name: Deploy
+          uses: JamesIves/github-pages-deploy-action@v4.4.1
+          with:
+            branch: main
+            folder: dist
+      
