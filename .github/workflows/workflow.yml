@@ -2,7 +2,7 @@ name: components-ci-cd
 on: 
   push:
     branches:
-      - 'master'
+      - "main"
 jobs:
     deploying_app: 
       name: deploying the App
@@ -22,6 +22,5 @@ jobs:
         - name: Deploy
           uses: JamesIves/github-pages-deploy-action@v4.4.1
           with:
-            branch: master
             folder: dist
       
