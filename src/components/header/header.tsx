@@ -29,7 +29,7 @@ export default component$(() => {
           </a>
         </li>
         <li>
-          This a component library
+          This a component library. Testing changes through ci-cd
         </li>
       </ul>
     </header>

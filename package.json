@@ -1,10 +1,11 @@
 {
   "name": "my-qwik-basic-starter",
+  "homepage": "https://vineethsagar.github.io/components",
   "description": "Recommended for your first Qwik app (comes with Qwik City)",
   "engines": {
     "node": ">=15.0.0"
   },
-  "private": true,
+  "private": true, 
   "scripts": {
     "build": "qwik build",
     "build.client": "vite build",
@@ -17,7 +18,9 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "deploy": "gh-pages -d dist",
+    "predeploy":"npm run build"
   },
   "devDependencies": {
     "@builder.io/qwik": "0.11.1",
@@ -28,6 +31,7 @@
     "@typescript-eslint/parser": "5.40.0",
     "eslint": "8.25.0",
     "eslint-plugin-qwik": "0.11.1",
+    "gh-pages": "^4.0.0",
     "node-fetch": "3.2.10",
     "prettier": "2.7.1",
     "typescript": "4.8.4",
